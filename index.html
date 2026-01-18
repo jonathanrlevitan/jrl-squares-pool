@@ -2,17 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Super Bowl Squares</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Super Bowl Squares Pool</title>
 </head>
 <body>
+
   <h1>Super Bowl Squares Pool</h1>
 
-  <div id="board-container">
-    <div id="board"></div>
-  </div>
+  <!-- Placeholder areas we’ll use later -->
+  <div id="owners"></div>
+  <div id="grid"></div>
 
+  <script>
+    const owners = [
+      { name: "Tucker Froelich", squares: 2 },
+      { name: "Matthew Lee", squares: 2 },
+      { name: "Robert Hudson", squares: 4 },
+      { name: "Jacob Hochstein", squares: 2 },
+      { name: "Alex Atherton", squares: 1 },
+      { name: "Jackson Peurach", squares: 2 },
+      { name: "Connor McDermott", squares: 4 },
+      { name: "Neha Rodricks", squares: 2 },
+      { name: "Seabass", squares: 4 },
+      { name: "Kayla Derman", squares: 1 },
+      { name: "Alex Cohen", squares: 2 },
+      { name: "Evan Katz", squares: 2 },
+      { name: "Dom Fenoglio", squares: 2 },
+      { name: "David Leshem", squares: 4 },
+      { name: "Eli Gertler", squares: 2 },
+      { name: "Kai Summersgill", squares: 2 },
+      { name: "Micah", squares: 2 },
+      { name: "Zain Jafar", squares: 3 },
+      { name: "Aditya", squares: 4 },
+      { name: "Jacob Miller", squares: 2 },
+      { name: "Bryan Fisher", squares: 2 },
+      { name: "James Gao", squares: 2 },
+      { name: "Jacqui Levitan", squares: 4 },
+      { name: "Jonathan Levitan", squares: 1 },
+      { name: "Chase Barclay", squares: 2 },
+    ];
 
-  <script src="script.js"></script>
+    const totalSquares = owners.reduce(
+      (sum, owner) => sum + owner.squares,
+      0
+    );
+
+    console.log("Total squares:", totalSquares);
+  </script>
+
 </body>
 </html>
