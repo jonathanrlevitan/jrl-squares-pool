@@ -41,12 +41,30 @@
       { name: "Chase Barclay", squares: 2 },
     ];
 
-    const totalSquares = owners.reduce(
-      (sum, owner) => sum + owner.squares,
-      0
-    );
+    const ownersDiv = document.getElementById("owners");
 
-    console.log("Total squares:", totalSquares);
+    const table = document.createElement("table");
+    table.border = "1";
+    table.cellPadding = "6";
+
+    const headerRow = document.createElement("tr");
+    headerRow.innerHTML = "<th>Name</th><th>Squares</th>";
+    table.appendChild(headerRow);
+
+    let totalSquares = 0;
+
+    owners.forEach(owner => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${owner.name}</td><td>${owner.squares}</td>`;
+      table.appendChild(row);
+      totalSquares += owner.squares;
+    });
+
+    const totalRow = document.createElement("tr");
+    totalRow.innerHTML = `<td><strong>Total</strong></td><td><strong>${totalSquares}</strong></td>`;
+    table.appendChild(totalRow);
+
+    ownersDiv.appendChild(table);
   </script>
 
 </body>
