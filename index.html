@@ -2,87 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Super Bowl Squares Pool</title>
+  <title>Super Bowl Squares 2026</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 6px;
+      text-align: center;
+      min-width: 32px;
+    }
+
+    #owners table {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Super Bowl Squares Pool</h1>
+  <h1>Super Bowl Squares</h1>
+  <p><strong>February 8, 2026</strong></p>
 
-  <!-- Placeholder areas we’ll use later -->
-  <div id="owners"></div>
+  <h2>Grid</h2>
   <div id="grid"></div>
 
-  <script>
-    const owners = [
-      { name: "Tucker Froelich", squares: 2 },
-      { name: "Matthew Lee", squares: 2 },
-      { name: "Robert Hudson", squares: 4 },
-      { name: "Jacob Hochstein", squares: 2 },
-      { name: "Alex Atherton", squares: 1 },
-      { name: "Jackson Peurach", squares: 2 },
-      { name: "Connor McDermott", squares: 4 },
-      { name: "Neha Rodricks", squares: 2 },
-      { name: "Seabass Ochoa", squares: 4 },
-      { name: "Kayla Derman", squares: 1 },
-      { name: "Alex Cohen", squares: 2 },
-      { name: "Evan Katz", squares: 2 },
-      { name: "Dom Fenoglio", squares: 2 },
-      { name: "David Leshem", squares: 4 },
-      { name: "Eli Gertler", squares: 2 },
-      { name: "Kai Summersgill", squares: 2 },
-      { name: "Micah Hurewitz", squares: 2 },
-      { name: "Zain Jafar", squares: 3 },
-      { name: "Aditya Sardesai", squares: 4 },
-      { name: "Jacob Miller", squares: 2 },
-      { name: "Bryan Fisher", squares: 2 },
-      { name: "James Gao", squares: 2 },
-      { name: "Jacqui Levitan", squares: 4 },
-      { name: "Jonathan Levitan", squares: 2 },
-      { name: "Chase Barclay", squares: 2 },
-      { name: "Ithika Senthilnathan", squares: 1 },
-      { name: "Miles King", squares: 4 },
-      { name: "Sara Azimi", squares: 2 },
-      { name: "Nathan Simon", squares: 2 },
-      { name: "Frankie Willard", squares: 2 },
-      { name: "Paul Levitan", squares: 4 },
-      { name: "Aidan Fetterly", squares: 2 },
-      { name: "Jacob Green", squares: 4 },
-      { name: "Neil Ashe", squares: 3 },
-      { name: "David Mellgard", squares: 4 },
-      { name: "Max Pollack", squares: 2 },
-      { name: "Caleb Dudley", squares: 2 },
-      { name: "Josh Levitan", squares: 2 },
-      { name: "Aidan Ashe", squares: 2 },
-      { name: "Ryan Lou", squares: 2 },
-      { name: "Matthew McCauley", squares: 1 },
-    ];
+  <h2>Owners</h2>
+  <div id="owners"></div>
 
-
-    const ownersDiv = document.getElementById("owners");
-
-    const table = document.createElement("table");
-    table.border = "1";
-    table.cellPadding = "6";
-
-    const headerRow = document.createElement("tr");
-    headerRow.innerHTML = "<th>Name</th><th>Squares</th>";
-    table.appendChild(headerRow);
-
-    let totalSquares = 0;
-
-    owners.forEach(owner => {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td>${owner.name}</td><td>${owner.squares}</td>`;
-      table.appendChild(row);
-      totalSquares += owner.squares;
-    });
-
-    const totalRow = document.createElement("tr");
-    totalRow.innerHTML = `<td><strong>Total</strong></td><td><strong>${totalSquares}</strong></td>`;
-    table.appendChild(totalRow);
-
-    ownersDiv.appendChild(table);
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
