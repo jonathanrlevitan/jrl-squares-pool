@@ -1,3 +1,5 @@
+// whole doc is hardcoded with randomized values
+
 const owners = [
   { name: "Tucker Froelich", squares: 2 },
   { name: "Matthew Lee", squares: 2 },
@@ -51,8 +53,26 @@ owners.forEach(owner => {
   }
 });
 
-const shuffledSquares = shuffle(squares);
-const squaresTimestamp = new Date().toLocaleString();
+// const shuffledSquares = shuffle(squares);
+
+// hardcoded with randomized values
+const shuffledSquares = [
+  "Aditya Sardesai","Neil Ashe","Aidan Fetterly","Bryan Fisher","Jacob Green","Robert Hudson","David Leshem","James Gao","Connor McDermott","Jonathan Levitan",
+  "David Mellgard","Caleb Dudley","Sara Azimi","Paul Levitan","Miles King","Dom Fenoglio","Eli Gertler","Seabass Ochoa","Paul Levitan","Seabass Ochoa",
+  "David Leshem","Sara Azimi","Chase Barclay","Miles King","Neil Ashe","David Leshem","Aditya Sardesai","David Mellgard","Alex Cohen","Caleb Dudley",
+  "Ithika Senthilnathan","Jacqui Levitan","Paul Levitan","Kai Summersgill","David Leshem","James Gao","Miles King","Seabass Ochoa","Nathan Simon","Connor McDermott",
+  "David Mellgard","Ryan Lou","Zain Jafar","Connor McDermott","Aidan Ashe","Nathan Simon","Paul Levitan","Zain Jafar","Josh Levitan","Kayla Derman",
+  "Miles King","Evan Katz","Kai Summersgill","Aidan Fetterly","Jacob Miller","Ryan Lou","Evan Katz","Jacqui Levitan","Seabass Ochoa","Micah Hurewitz",
+  "Robert Hudson","David Mellgard","Ellie Smith","Micah Hurewitz","Jacob Green","Tucker Froelich","Matthew Lee","Jonathan Levitan","Robert Hudson","Jacob Miller",
+  "Frankie Willard","Dom Fenoglio","Alex Cohen","Zain Jafar","Bryan Fisher","Matthew McCauley","Jackson Peurach","Josh Levitan","Tucker Froelich","Jacob Hochstein",
+  "Alex Atherton","Connor McDermott","Robert Hudson","Jacqui Levitan","Matthew Lee","Aidan Ashe","Aditya Sardesai","Chase Barclay","Max Pollack","Jackson Peurach",
+  "Jacob Green","Neil Ashe","Frankie Willard","Max Pollack","Eli Gertler","Jacob Green","Neha Rodricks","Aditya Sardesai","Jacob Hochstein","Neha Rodricks"
+];
+
+
+
+// const squaresTimestamp = new Date().toLocaleString();
+const squaresTimestamp = "1/24/2026, 5:17:23 PM"
 
 owners.sort((a, b) => a.name.localeCompare(b.name));
 const ownersDiv = document.getElementById("owners");
@@ -90,9 +110,12 @@ function shuffle(array) {
   return arr;
 }
 
-const xAxis = shuffle(generateNumbers());
-const yAxis = shuffle(generateNumbers());
-const timestamp = new Date().toLocaleString();
+// const xAxis = shuffle(generateNumbers());
+// const yAxis = shuffle(generateNumbers());
+const xAxis = [4, 6, 2, 3, 1, 7, 8, 0, 9, 5];
+const yAxis = [1, 5, 3, 4, 8, 0, 6, 9, 2, 7];
+// const timestamp = new Date().toLocaleString();
+const timestamp = "1/24/2026, 5:17:23 PM"
 
 const gridDiv = document.getElementById("grid");
 
