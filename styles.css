@@ -27,3 +27,11 @@
   justify-content: center;
   font-size: 0.8rem;
 }
+
+.axis-note {
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+}
